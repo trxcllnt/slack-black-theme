@@ -3,6 +3,8 @@
 # Originally written by smitt04 in https://github.com/widget-/slack-black-theme/issues/98#issuecomment-511449693
 # Extended for slack 3/4 recognition by Nockiro
 
+set -o errexit
+
 OSX_SLACK_RESOURCES_DIR="/Applications/Slack.app/Contents/Resources"
 LINUX_SLACK_RESOURCES_DIR="/usr/lib/slack/resources"
 
@@ -57,11 +59,11 @@ if [[ $APP_VER == app-4* ]]; then
 	echo ""
 	echo "This script requires sudo privileges." && echo "You'll need to provide your password."
 
-	sudo npx asar extract "${SLACK_RESOURCES_DIR}"/app.asar "${SLACK_RESOURCES_DIR}"/app.asar.unpacked
+	sudo sh -c "npx asar extract $SLACK_RESOURCES_DIR/app.asar $SLACK_RESOURCES_DIR/app.asar.unpacked"
 
 	cat interjectCode.js | sudo tee -a "${SLACK_FILE_PATH_4}" > /dev/null
 
-	sudo npx asar pack "${SLACK_RESOURCES_DIR}"/app.asar.unpacked "${SLACK_RESOURCES_DIR}"/app.asar
+	sudo sh -c "npx asar pack $SLACK_RESOURCES_DIR/app.asar.unpacked $SLACK_RESOURCES_DIR/app.asar"
 fi
 
 if [[ $APP_VER == app-3* ]]; then

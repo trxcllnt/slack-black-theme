@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
    let webviews = document.querySelectorAll(".TeamView webview");
 
    // Fetch our CSS in parallel ahead of time
-   const cssPath = 'https://raw.githubusercontent.com/Nockiro/slack-black-theme/master/custom.css';
+   const cssPath = 'https://raw.githubusercontent.com/trxcllnt/slack-black-theme/master/custom.css';
    let cssPromise = fetch(cssPath).then(response => response.text());
 
    let customCustomCSS = `
    :root {
       /* Modify these to change your theme colors: */
       --primary: #09F;
-      --text: #888;
+      --text: #EEE;
       --background: #111;
       --background-elevated: #222;
    } 
