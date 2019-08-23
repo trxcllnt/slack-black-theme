@@ -69,7 +69,7 @@ if [[ $APP_VER == app-4* ]]; then
 
     cat interjectCode.js | sudo tee -a "${SLACK_FILE_PATH_4}" > /dev/null
 
-    sudo sh -c "$SET_SUDO_PATH npx asar pack $SLACK_RESOURCES_DIR/app.asar.unpacked $SLACK_RESOURCES_DIR/app.asar"
+    sudo sh -c "$SET_SUDO_PATH npx asar pack $SLACK_RESOURCES_DIR/app.asar.unpacked $SLACK_RESOURCES_DIR/app.asar && rm -rf $SLACK_RESOURCES_DIR/app.asar.unpacked"
 fi
 
 if [[ $APP_VER == app-3* ]]; then
