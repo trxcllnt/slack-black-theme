@@ -49,9 +49,9 @@ hr {
     border-bottom: 1px solid var(--background-elevated);
 }
 
-.ql-composer {
-    display: none !important;
-}
+/* Hide the annoying new message bar popups */
+.ql-composer { display: none !important; }
+.p-context_bar { display: none !important; }
 
 .popover_mask {
    background-color: rgba(0, 0, 0, 0.3);
