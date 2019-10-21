@@ -1769,7 +1769,7 @@ ts-jumper .p-jumper__help {
 }
 /* message not allowed */
 #msg_input_message {
-	background-color: var(--bacground-elevated);
+	background-color: var(--background-elevated);
 }
 
 .internal_im_link,
