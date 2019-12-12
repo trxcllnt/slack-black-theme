@@ -21,6 +21,7 @@ limitations under the License.
    --background: #111;
    --background-elevated: #222;
 
+
    /* These should be less important: */
    --background-hover: rgba(255, 255, 255, 0.1);
    --background-light: #AAA;
@@ -34,6 +35,11 @@ limitations under the License.
 
    --scrollbar-background: #000;
    --scrollbar-border: var(--primary);
+   
+   /* Overriding slacks own variables */
+   --sk_primary_background: var(--background);
+   --sk_primary_foreground: var(--text);
+   --sk_foreground_max: var(--text);
 }
 
 h1, h2, h3, h4 {
@@ -725,7 +731,7 @@ ts-mention.ts_tip:hover
    color: var(--text);
 }
 .p-emoji_picker__preview_text {
-   background-color: var(--bacground-elevated);
+   background-color: var(--background-elevated);
    color: var(--text);
 }
 
@@ -883,6 +889,8 @@ button.c-button-unstyled.p-message_input_plus {
    border: 1px solid var(--border-bright);
    border-bottom: 0px;
    border-radius: 10px 10px 0 0;
+   box-shadow: none;
+   bottom: 0;
 }
 
 #threads_msgs_scroller_div, ts-thread {
@@ -1311,7 +1319,9 @@ ts-jumper ts-jumper-container {
     background: var(--background-hover);
     color: var(--text);
 }
-
+c-menu_item__description {
+	color: var(--text-bright);
+}
 .sidebar_menu_list_item {
 	color: var(--text-bright);
 }
@@ -1327,7 +1337,7 @@ ts-jumper ts-jumper-container {
     border: 1px solid var(--border-dim);
 }
 button:not(.c-menu_item__button--danger) > .c-menu_item__label {
-    color: var(--text-bright);
+    color: var(--text);
 }
 .c-menu_item__button--danger .c-menu_item__description {
     color: var(--text);
@@ -1627,7 +1637,7 @@ nav {
 .p-activity_flexpane__top_anchor_hack_item {
     border-bottom-color: var(--border-dim);
 }
-/* whats' new */
+/* what's new */
 #whats_new_tab #whats_new_scroller {
     background: var(--background);
 }
@@ -1636,6 +1646,9 @@ nav {
 }
 .indifferent_grey {
     color: var(--text)!important;
+}
+h5.p-whats_new__date {
+    color: var(--text);
 }
 /* overriding indifferent grey here to highlight whats'new links */
 #whats_new_tab .indifferent_grey {
@@ -1723,6 +1736,9 @@ ts-jumper .p-jumper__help {
 .c-message_attachment__author_name, .c-message_attachment__author_name.c-link--button, .c-message_attachment__author_name.c-link--button:active, .c-message_attachment__author_name.c-link--button:focus, .c-message_attachment__author_name.c-link--button:hover {
     color: var(--text);
 }
+.p-share_dialog__section:first-child {
+    margin-top: 16px;
+}
 
 /* 3.3.1 emoji picker */
 .c-menu.p-emoji_picker, .c-menu.p-emoji_picker div, .c-menu.p-emoji_picker h3 {
@@ -1751,6 +1767,9 @@ ts-jumper .p-jumper__help {
 }
 .c-search_autocomplete__suggestion_item {
     color: var(--text);
+}
+.c-search_autocomplete footer, .c-search, .c-search__tabs, .c-search__input_box {
+    box-shadow: unset;
 }
 .p-message_limit_banner__graphic .c-icon--eye-closed {
     color: var(--text);
@@ -1783,7 +1802,7 @@ ts-jumper .p-jumper__help {
 }
 /* message not allowed */
 #msg_input_message {
-	background-color: var(--bacground-elevated);
+	background-color: var(--background-elevated);
 }
 
 .internal_im_link,
@@ -1817,8 +1836,12 @@ ts-jumper .p-jumper__help {
 }
 .p-app_space_profile__info {
     background-color: var(--background-elevated);
-}.p-app_space__header {
+}
+.p-app_space__header {
     color: var(--text);
+}
+.p-channel_sidebar__channel, .p-channel_sidebar__link--selected {
+    line-height: unset;
 }
 
 /* file upload */
@@ -1897,7 +1920,9 @@ strong {
 .p-message_pane__foreword__description, .p-message_pane__limited_history_alert {
     color: var(--text);
 }
-
+.p-message_pane_input__disabled {
+    background-color: var(--background-elevated);
+}
 /* sidebars default in general */
 .p-workspace--classic-nav .p-workspace__secondary_view {
 	background-color: var(--background);
@@ -1930,6 +1955,15 @@ strong {
 }
 .p-classic_nav__right__search__placeholder {
     color: var(--text);
+}
+.p-classic_nav__right__search {
+    border-color: var(--border-dim);
+}
+.p-classic_nav__right__search:hover {
+    border-color: var(--border-bright);
+}
+.p-classic_nav__right__search:not(.p-classic_nav__right__search--dark):hover .p-classic_nav__right__search__placeholder {
+    color: inherit;
 }
 .p-pinned_items__empty_list .p-pinned_items__empty_list_action {
     color: var(--text);
@@ -2003,4 +2037,8 @@ text.p-classic_nav__team_messages_progress_bar_text {
 }
 .p-shared_channels_team_menu_item__label--new {
     background-color: var(--background-hover);
+}
+/* File Viewer */
+.p-file_viewer__header__edit_btn, .p-file_viewer__header__meta__name {
+    color: var(--text-bright);
 }

@@ -2,6 +2,10 @@
 
 A darker, more contrasty, Slack theme.
 
+### Please note: Slack now has its own [dark theme](https://slackhq.com/dark-mode-for-slack-desktop) that is quite similar to the one of this repository and, frankly, a bit more optimized.  
+Nevertheless, feel free to report any bugs on this since it still can be used to modify the theme of slack.  
+Also, it might be a good idea to enable slacks own dark theme even if you are using the default theme of this repository, just for getting a few optimizations the slack team made.
+
 # Preview
 
 ![Screenshot](https://cloud.githubusercontent.com/assets/7691630/24120350/4cbb643e-0d82-11e7-8353-5d4eb65dfd6a.png)
