@@ -53,6 +53,16 @@ hr {
 .ql-composer { display: none !important; }
 .p-context_bar { display: none !important; }
 
+/* Hide the "Apps" sidebar button */
+body > div.p-client_container > div > div.p-workspace.p-workspace--context-pane-collapsed.p-workspace--classic-nav > div.p-workspace__sidebar > div > nav > div.p-channel_sidebar__list > div:nth-child(1) > div > div.c-scrollbar__hider > div > div > div:nth-child(3) {
+    display: none !important;
+    visibility: none !important;
+}
+button[data-sidebar-link-id="Papps"] {
+    display: none !important;
+    visibility: none !important;
+}
+
 .popover_mask {
    background-color: rgba(0, 0, 0, 0.3);
 }
